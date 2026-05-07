@@ -2,22 +2,25 @@
 .frasi-rotanti {
   position: relative;
   width: 100%;
-  min-height: 76px;
+  height: 115px;
   overflow: hidden;
   font-family: "DM Sans", sans-serif;
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.35;
   color: #1e2a38;
 }
 
 .frasi-rotanti .frase {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   opacity: 0;
   transform: translateY(12px);
   animation: rotazioneFrasi 20s infinite;
   white-space: normal;
   overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .frasi-rotanti .frase:nth-child(1) {
@@ -44,14 +47,6 @@
 
 .frasi-rotanti .frase a:hover {
   color: #f5881f;
-}
-
-@media (max-width: 600px) {
-  .frasi-rotanti {
-    min-height: 110px;
-    font-size: 21px;
-    line-height: 1.35;
-  }
 }
 
 @keyframes rotazioneFrasi {
@@ -81,3 +76,35 @@
   }
 }
 </style>
+
+<div class="frasi-rotanti">
+
+  <div class="frase">
+    <a href="https://csbno.cosedafare.net/corsi/scienze-sociali/economia/fondi-pensione-welfare-quali-opportunita-lavoratori-aziende-5880.html" target="_blank">
+      Fondi pensione e welfare:
+    </a>
+    incontro gratuito in CSBNO
+  </div>
+
+  <div class="frase">
+    Scopri i nuovi viaggi di
+    <a href="https://webopac.csbno.net/home/percorrendo-l-arte/" target="_blank">
+      Percorrendo l'Arte
+    </a>
+  </div>
+
+  <div class="frase">
+    Educazione finanziaria in biblioteca,
+    <a href="https://csbno.cosedafare.net/corsi/scienze-sociali/economia/presentazione-corso-educazione-finanziaria-5912.html" target="_blank">
+      partecipa alla presentazione
+    </a>
+  </div>
+
+  <div class="frase">
+    È attiva la promo +TECA per il
+    <a href="https://viewstripo.email/template/d61e3cf2-d146-4672-8001-93f8f2e143d2" target="_blank">
+      Festival di Villa Arconati
+    </a>
+  </div>
+
+</div>
