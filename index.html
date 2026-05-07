@@ -2,10 +2,10 @@
 .frasi-rotanti {
   position: relative;
   width: 100%;
-  min-height: 80px;
+  min-height: 35px;
   overflow: hidden;
   font-family: "DM Sans", Arial, sans-serif;
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(17px, 2.2vw, 23px);
   line-height: 1.35;
   color: #1e2a38;
 }
@@ -16,9 +16,9 @@
   left: 0;
   width: 100%;
   opacity: 0;
-  animation-name: rotazioneFrasi;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
+  visibility: hidden;
+  pointer-events: none;
+  animation: rotazioneFrasi 20s infinite;
 }
 
 .frasi-rotanti .frase:nth-child(1) {
@@ -46,26 +46,36 @@
 @keyframes rotazioneFrasi {
   0% {
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateY(8px);
   }
 
   5% {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
   22% {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
   27% {
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateY(-8px);
   }
 
   100% {
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateY(-8px);
   }
 }
@@ -92,7 +102,8 @@
     Incontro di
     <a href="https://csbno.cosedafare.net/corsi/scienze-sociali/economia/presentazione-corso-educazione-finanziaria-5912.html" target="_blank">
       Educazione Finanziaria
-    </a> in biblioteca
+    </a>
+    in biblioteca
   </div>
 
   <div class="frase">
@@ -101,4 +112,5 @@
       Festival di Villa Arconati
     </a>
   </div>
+
 </div>
