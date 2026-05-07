@@ -1,42 +1,23 @@
 <style>
 .frasi-rotanti {
-  position: relative;
   width: 100%;
-  height: 115px;
-  overflow: hidden;
-  font-family: "DM Sans", sans-serif;
+  min-height: 90px;
+  overflow: visible;
+  font-family: "DM Sans", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.35;
   color: #1e2a38;
 }
 
 .frasi-rotanti .frase {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transform: translateY(12px);
-  animation: rotazioneFrasi 20s infinite;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: normal;
+  display: none;
+  color: #1e2a38;
+  margin: 0;
+  padding: 0;
 }
 
-.frasi-rotanti .frase:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.frasi-rotanti .frase:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.frasi-rotanti .frase:nth-child(3) {
-  animation-delay: 10s;
-}
-
-.frasi-rotanti .frase:nth-child(4) {
-  animation-delay: 15s;
+.frasi-rotanti .frase:first-child {
+  display: block;
 }
 
 .frasi-rotanti .frase a {
@@ -44,41 +25,9 @@
   text-decoration: none;
   font-weight: 700;
 }
-
-.frasi-rotanti .frase a:hover {
-  color: #f5881f;
-}
-
-@keyframes rotazioneFrasi {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  5% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  22% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  27% {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-}
 </style>
 
 <div class="frasi-rotanti">
-
   <div class="frase">
     <a href="https://csbno.cosedafare.net/corsi/scienze-sociali/economia/fondi-pensione-welfare-quali-opportunita-lavoratori-aziende-5880.html" target="_blank">
       Fondi pensione e welfare:
@@ -106,5 +55,4 @@
       Festival di Villa Arconati
     </a>
   </div>
-
 </div>
