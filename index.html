@@ -21,8 +21,6 @@
   animation: rotazioneFrasi 18s infinite;
 }
 
-/* 5 frasi = una ogni 6 secondi */
-
 .frasi-rotanti .frase:nth-child(1) {
   animation-delay: 0s;
 }
@@ -41,8 +39,11 @@
   font-weight: 700;
 }
 
-@keyframes rotazioneFrasi {
+.frasi-rotanti .frase a:hover {
+  text-decoration: underline;
+}
 
+@keyframes rotazioneFrasi {
   0% {
     opacity: 0;
     visibility: hidden;
@@ -50,14 +51,14 @@
     transform: translateY(6px);
   }
 
-  3% {
+  2% {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  17% {
+  18% {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
