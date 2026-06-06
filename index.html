@@ -2,11 +2,11 @@
 .frasi-rotanti {
   position: relative;
   width: 100%;
-  min-height: 35px;
+  height: 35px;
   overflow: hidden;
   font-family: "DM Sans", Arial, sans-serif;
   font-size: clamp(13px, 1.7vw, 18px);
-  line-height: 1.35;
+  line-height: 35px;
   color: #1e2a38;
 }
 
@@ -19,6 +19,7 @@
   visibility: hidden;
   pointer-events: none;
   animation: rotazioneFrasi 12s infinite;
+  white-space: nowrap;
 }
 
 .frasi-rotanti .frase:nth-child(1) {
@@ -40,7 +41,6 @@
 }
 
 @keyframes rotazioneFrasi {
-
   0% {
     opacity: 0;
     visibility: hidden;
@@ -78,11 +78,13 @@
 }
 </style>
 
- <div class="frase">
+<div class="frasi-rotanti">
+
+  <div class="frase">
     <a href="https://csbno.cosedafare.net/corsi/scienze-sociali/economia/affitto-casa-proprieta--5977.html" target="_blank">
       Affitto o casa di proprietà?
     </a>
-   Talk di educazione finanziaria
+    Talk di educazione finanziaria
   </div>
   
   <div class="frase">
